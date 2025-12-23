@@ -20,6 +20,59 @@ Instead of prompt → output → polish, you architect critique rounds:
 
 Six months ago, this required orchestrating a dozen different models—one for generation, another for critique, a third for fact-checking. **Tool-interspersed reasoning** collapsed all of that into a single model that switches roles on demand. Same quality, fraction of the complexity.
 
+flowchart LR
+    subgraph Input
+        A[📄 Draft]
+    end
+    
+    subgraph "Phase 0: Intent Detection"
+        B{Detect Mode}
+        B -->|CREATE| C1[Generate First]
+        B -->|REFINE| C2[Analyze Input]
+        B -->|DECIDE| C3[Frame Options]
+        B -->|DISCOVER| C4[Explore Space]
+    end
+    
+    subgraph "Phase 1: Council Selection"
+        D{Select Council}
+        D -->|Code/Tech| E1[Structured Review]
+        D -->|A vs B| E2[Elimination Tournament]
+        D -->|Math/Logic| E3[Meta-Reasoning]
+        D -->|General| E4[Expert Council]
+    end
+    
+    subgraph "Phase 2-3: Deliberation Rounds"
+        F[🔍 Probe 1\nWeb Grounding]
+        G[⚔️ Round 1\nX Agents Deliberate]
+        H[🔍 Probe 2\nEvidence Check]
+        I[⚔️ Round 2\nPositions Refined]
+        J[🔍 Probe 3\nFinal Grounding]
+        K[⚔️ Round 3\nConvergence Check]
+    end
+    
+    subgraph "Phase 4: Output"
+        L{Converged?}
+        L -->|Yes| M[✅ Final Output]
+        L -->|No + Echo Chamber| N[Add Adversarial Agent]
+        N --> G
+    end
+    
+    A --> B
+    C1 --> D
+    C2 --> D
+    C3 --> D
+    C4 --> D
+    E1 --> F
+    E2 --> F
+    E3 --> F
+    E4 --> F
+    F --> G
+    G --> H
+    H --> I
+    I --> J
+    J --> K
+    K --> L
+
 ## Quick Start
 
 ### As a Claude Skill
