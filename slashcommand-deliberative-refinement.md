@@ -1,10 +1,20 @@
 ---
-description: Deliberative Refinement - Parameterized multi-agent deliberation for transforming drafts into production-ready deliverables through structured critique and evidence grounding
+description: Deliberative Refinement - Use when validating drafts, making complex decisions, or stress-testing claims. Parameterized multi-agent deliberation for transforming drafts into production-ready deliverables through structured critique and evidence grounding.
 ---
 
 # Deliberative Refinement
 
 > *Stop asking AI for answers. Make it defend them.*
+
+---
+
+## Quick Example
+
+**Before (Draft claim):**
+> Our new architecture reduces latency by 50%.
+
+**After V(5, 2, 1) Deliberation:**
+> Our new architecture reduces P95 latency from 120ms to 58ms under 10K concurrent users, validated against production traffic logs from Nov 2024. Edge cases with cold caches show 85ms (still a 29% improvement).
 
 ---
 
