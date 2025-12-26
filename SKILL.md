@@ -68,14 +68,22 @@ See [references/councils.md](references/councils.md):
 - Large scope → **Parallel Groups** (split, debate, merge)
 - General → **Expert Council** (full deliberation)
 
+### Phase 1.5: The Architect (Plan Critique)
+*Before* deliberation, pause. The "Architect" agent critiques the decomposition:
+1.  "Does this structure miss any critical risks?"
+2.  "Is the decomposition too granular or too broad?"
+*Action*: Adjust Phase 2 plan if gaps are found.
+
 ### Phase 2: Decomposition
 Split the problem into parts. Tackle risky pieces first.
 
 ### Phase 3: Deliberation
 For each concept:
 1. Form council (X agents)
-2. Execute: [Probe]→R₁→[Probe]→R₂→...→Rᵧ→[Probe]
-3. Synthesize consensus
+7. Execute: [Probe]→R₁→[Probe]→R₂→...→Rᵧ→[Probe]
+    *   **Rolling Memory**: If Round > 2, compress R1 votes into a "Previous Consensus" summary to save context.
+    *   **Adversarial Injection**: If R1 result is **Unanimous**, FORCE the addition of an "Advocatus Diaboli" agent for R2 to challenge the groupthink.
+8. Synthesize consensus
 
 **Probe Strategy:**
 - LINEAR: Each probe deepens previous finding
