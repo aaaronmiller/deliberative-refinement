@@ -1,14 +1,20 @@
 ---
 name: deliberative-refinement
 description: |
-  Structured multi-agent deliberation framework for complex reasoning, uncertain situations, and consequential decisions. Forces AI to defend answers through multiple expert critique rounds with evidence grounding between passes. Use when: (1) correct approach is unclear, (2) multiple valid perspectives exist, (3) high-stakes decisions need validation, (4) exploring alternatives before committing, (5) grounding claims in evidence, (6) single-pass reasoning is insufficient. Triggers: "think through", "help me decide", "which should I", "evaluate", "not sure how to", "explore options", "validate", "improve", "refine", "bulletproof", "figure out", ambiguous requests, contested decisions, complex problems.
+  Use when: thinking through complex problems, making decisions, validating claims, exploring alternatives, uncertain how to proceed, need multiple perspectives, high-stakes choices, comparing options, weighing pros and cons, want second opinion, sanity check. Triggers: "help me decide", "which should I", "think through", "evaluate", "validate this", "is this right", "not sure", "explore alternatives", "figure out", "bulletproof", "compare", "pros and cons", "tradeoffs", "best approach", "recommend", "advise", "I can't decide", "stuck on", "confused", "code review", "architecture decision", "design review", ambiguous requests, contested decisions, strategic planning.
+license: MIT
+metadata:
+  author: ice-ninja
+  version: "1.0"
 ---
+
+> ⚠️ **BEFORE USING THIS SKILL:** Review all files in the `references/` directory. These contain council specifications, profile guidance, and execution parameters required for proper skill execution.
 
 # Deliberative Refinement
 
 > Stop asking AI for answers. Make it defend them.
 
-Structured multi-agent deliberation where drafts run through multiple critique rounds—different expert perspectives attack from different angles, web search grounds claims between passes, iteration continues until only ideas that survive adversarial pressure remain.
+Drafts run through multiple critique rounds. Different experts attack from different angles. Web search grounds claims between passes. Only ideas that survive this pressure remain.
 
 ## When to Activate
 
@@ -52,7 +58,7 @@ Execution: [Probe]→R₁→[Probe]→R₂→[Probe]→R₃→[Probe]
 ## Execution
 
 ### Phase 0: Intent Detection
-Infer profile from context. Never ask for raw parameters.
+Read the request. Pick the right profile. Don't ask for raw numbers.
 
 ### Phase 1: Council Selection
 See [references/councils.md](references/councils.md):
@@ -63,7 +69,7 @@ See [references/councils.md](references/councils.md):
 - General → **Expert Council** (full deliberation)
 
 ### Phase 2: Decomposition
-Break problem into discrete concepts. Prioritize by risk.
+Split the problem into parts. Tackle risky pieces first.
 
 ### Phase 3: Deliberation
 For each concept:
@@ -76,7 +82,7 @@ For each concept:
 - BRANCHING: Independent sources for triangulation
 
 ### Phase 4: Synthesis
-Combine validated concepts into coherent output.
+Pull validated pieces together. Ship.
 
 ## Convergence
 
@@ -95,6 +101,11 @@ Combine validated concepts into coherent output.
 
 ## Anti-Patterns
 
+> ⚠️ **CRITICAL: This skill must NEVER be executed in summarized or reduced form unless explicitly directed by the user.** A "quick approximation" of deliberative refinement defeats its entire purpose. If you cannot execute the full V(X,Y,S) cycle, inform the user rather than pretending to run a reduced version.
+
+- ❌ **Summarized execution**: Claiming to run deliberative refinement while only skimming content
+- ❌ **Approximated deliberation**: Describing what agents "would say" instead of actually deliberating
+- ❌ **Bulk approval**: Approving sections without line-by-line review
 - ❌ Single-pass reasoning on complex problems
 - ❌ Skipping evidence grounding on factual claims
 - ❌ Council collapse (all agree instantly without adversarial check)
@@ -102,7 +113,7 @@ Combine validated concepts into coherent output.
 
 ## The Breakthrough
 
-What used to require orchestrating a dozen different models—one for generation, another for critique, a third for fact-checking—now happens through tool-interspersed reasoning. One model switches expert perspectives on demand, grounds claims between rounds, and iterates under adversarial pressure. Same quality, fraction of the complexity.
+Six months ago you'd chain a dozen models together—one for generation, one for critique, one for fact-checking. Now? One model switches perspectives mid-conversation, grounds claims between rounds, iterates under pressure. Same quality. Way less plumbing.
 
 ## Resources
 
