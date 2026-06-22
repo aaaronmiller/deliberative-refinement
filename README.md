@@ -1,5 +1,11 @@
 # Deliberative Refinement
 
+<p align="center">
+  <img src="https://img.shields.io/github/stars/aaaronmiller/deliberative-refinement?style=for-the-badge&color=f59e0b" alt="Stars">
+  <img src="https://img.shields.io/badge/Claude%20Code-Skill-8b5cf6?style=for-the-badge&logo=anthropic&logoColor=white" alt="Claude Code Skill">
+  <img src="https://img.shields.io/badge/Method-Adversarial%20Self--Critique-0ea5e9?style=for-the-badge" alt="Method">
+</p>
+
 > Stop asking AI for answers. Make it defend them.
 
 A structured multi-agent deliberation framework for complex reasoning, uncertain situations, and consequential decisions.
