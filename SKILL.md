@@ -1,11 +1,11 @@
 ---
 name: deliberative-refinement
-description: |
-  Use when: thinking through complex problems, making decisions, validating claims, exploring alternatives, uncertain how to proceed, need multiple perspectives, high-stakes choices, comparing options, weighing pros and cons, want second opinion, sanity check. Triggers: "help me decide", "which should I", "think through", "evaluate", "validate this", "is this right", "not sure", "explore alternatives", "figure out", "bulletproof", "compare", "pros and cons", "tradeoffs", "best approach", "recommend", "advise", "I can't decide", "stuck on", "confused", "code review", "architecture decision", "design review", ambiguous requests, contested decisions, strategic planning.
+description: "Tests a decision, claim or plan through rounds of adversarial debate among several perspectives before committing to it. Use for high-stakes choices, comparing options or validating a claim."
 license: MIT
 metadata:
+  description-reviewed: "2026-11-10"
   author: ice-ninja
-  version: "1.0"
+  version: "1.1.0"
 ---
 
 > ⚠️ **BEFORE USING THIS SKILL:** Review all files in the `references/` directory. These contain council specifications, profile guidance, and execution parameters required for proper skill execution.
