@@ -6,6 +6,8 @@ metadata:
   description-reviewed: "2026-11-10"
   author: ice-ninja
   version: "1.1.0"
+tags:
+  - DOMAIN
 ---
 
 > ⚠️ **BEFORE USING THIS SKILL:** Review all files in the `references/` directory. These contain council specifications, profile guidance, and execution parameters required for proper skill execution.
